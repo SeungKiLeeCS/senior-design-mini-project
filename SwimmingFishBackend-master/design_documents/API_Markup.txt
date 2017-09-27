@@ -1,0 +1,119 @@
+##### CLASSES ENDPOINTS #####
+# getting all classes for a specific user ID
+# GET /users/{userID}/classes
+# JSON response format:
+[
+    {
+        courseNumber: "3308",
+        subject: "EMIS",
+        professor: "fontenot",
+        color: "hexcolor",
+        classID: ""
+    },
+    ...
+]
+
+# adding a class to the list of classes for a user ID
+# POST /users/{userID}/classes/
+# JSON request format:
+{
+    courseNumber: "3308",
+    subject: "EMIS",
+    professor: "fontenot",
+}
+
+# getting all the notes, exams, and assignments for a class ID
+# GET /users/{userID}/classes/{classID}
+# JSON response format:
+{
+    exams: [
+    {
+        examID: "212312",
+        name: "Exam1",
+        date: 2017-05-26 14:17:16
+    },
+    ...
+    ],
+    notes: [
+    {
+        noteID: "212312",
+        name: "MyNotes1",
+        date: 2017-05-26 14:17:16
+        assocExamID: "123123"
+    },
+    ...
+    ],
+    assignments: [
+    {
+        assignmentID: "212312",
+        name: "Homework1",
+        date: 2017-05-26 14:17:16
+        assocExamID: "123123"
+    },
+    ...
+    ]
+}
+
+
+
+##### EXAMS ENDPOINTS #####
+# getting an exam by ID for a given class
+# GET /users/{userID}/classes/{classID}/exams/{examID}
+# JSON response format (exam object):
+{
+    examID: "123123",
+    name: "Exam1",
+    date: 2017-05-26 14:17:16
+}
+
+# adding an exam for a given class
+# POST /users/{userID}/classes/{classID}/exams/
+# JSON request format:
+{
+    name: "Exam1",
+    date: 2017-05-26 14:17:16
+}
+
+
+
+##### ASSIGNMENTS ENDPOINTS #####
+# getting an assignment by ID for a given class
+# GET /users/{userID}/classes/{classID}/assignments/{assignmentID}
+# JSON response format (assignment object):
+{
+    assignmentID: "980921",
+    name: "Homework1",
+    date: 2017-05-26 14:17:16,
+    assocExamID: "123123"
+}
+
+# adding an assignment for a given class
+# POST /users/{userID}/classes/{classID}/assignments/
+# JSON request format:
+{
+    name: "Homework1",
+    date: 2017-05-26 14:17:16,
+    assocExamID: "123123"
+}
+
+
+
+##### NOTES ENDPOINTS #####
+# getting a note by ID for a given class
+# GET /users/{userID}/classes/{classID}/notes/{noteID}
+# JSON response format (note object):
+{
+    noteID: "980921",
+    name: "MyNotes1",
+    date: 2017-05-26 14:17:16,
+    assocExamID: "123123"
+}
+
+# adding an assignment for a given class
+# POST /users/{userID}/classes/{classID}/assignments/
+# JSON request format:
+{
+    name: "MyNotes1",
+    date: 2017-05-26 14:17:16,
+    assocExamID: "123123"
+}

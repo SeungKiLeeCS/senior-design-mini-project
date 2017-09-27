@@ -1,0 +1,66 @@
+{
+  "GET /users/id/classes": [
+    {
+      "courseNumber": "CSE 4345",
+      "courseName": "Senior Design",
+      "instructor": "Fontenot",
+      "color": "2ecc71",
+      "courseID": "10"
+    },
+    {
+      "courseNumber": "EMIS 3308",
+      "courseName": "Engineering Management",
+      "instructor": "Goodman",
+      "color": "e74c3c",
+      "courseID": "4"
+    },
+    {
+      "courseNumber": "CSE 7341",
+      "courseName": "Operating Systems",
+      "instructor": "Evans",
+      "color": "3498db",
+      "courseID": "5"
+  }],
+  "GET /users/id/classes/id": {
+    "exams": [
+      {
+          "examID": "212312",
+          "name": "Exam1",
+          "date": "2017-05-26 14:17:16"
+      }
+    ],
+    "notes": [
+      {
+          "noteID": "212312",
+          "name": "MyNotes1",
+          "date": "2017-05-26 14:17:16",
+          "assocExamID": "123123"
+      }
+    ],
+    "assignments": [
+      {
+          "assignmentID": "212312",
+          "name": "Homework1",
+          "date": "2017-05-26 14:17:16",
+          "assocExamID": "123123"
+      }
+    ]
+  },
+  "GET /users/id/classes/id/exams/id": {
+      "examID": "123123",
+      "name": "Exam1",
+      "date": "2017-05-26 14:17:16"
+  },
+  "GET /users/id/classes/id/assignments/id": {
+      "assignmentID": "980921",
+      "name": "Homework1",
+      "date": "2017-05-26 14:17:16",
+      "assocExamID": "123123"
+  },
+  "GET /users/id/classes/id/notes/id": {
+      "noteID": "980921",
+      "name": "MyNotes1",
+      "date": "2017-05-26 14:17:16",
+      "assocExamID": "123123"
+  }
+}
